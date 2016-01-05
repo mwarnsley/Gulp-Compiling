@@ -31,6 +31,7 @@ gulp.task('images', function(){
 });
 
 //default task
-gulp.task('default', function(){
-
+gulp.task('default',['images'], function(){
+//image changes
+gulp.watch(images.in, ['images']);
 });
