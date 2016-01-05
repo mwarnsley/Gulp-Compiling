@@ -1,0 +1,22 @@
+{
+  "name": "gulpcompiling",
+  "version": "1.0.0",
+  "description": "Gulp Compiling",
+  "main": "build/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwarnsley/Gulp-Compiling.git"
+  },
+  "author": "Marcus Warnsley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mwarnsley/Gulp-Compiling/issues"
+  },
+  "homepage": "https://github.com/mwarnsley/Gulp-Compiling#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
