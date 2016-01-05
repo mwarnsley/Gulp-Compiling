@@ -2,7 +2,8 @@
 
 //Include gulp and plugins
 
-var gulp = require('gulp');
+var gulp = require('gulp'),
+	imagemin = require('gulp-imagemin');
 
 var source = 'source/',
 	dest = 'build/',
@@ -16,6 +17,7 @@ var source = 'source/',
 
 gulp.task('images', function(){
 	return gulp.src(images.in)
+		.pipe(imagemin())
 		.pipe(gulp.dest(images.out));
 });
 
