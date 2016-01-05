@@ -1,11 +1,12 @@
 //Gulp.js configuration
 
 //Include gulp and plugins
-
 var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
-	newer = require('gulp-newer');
+	newer = require('gulp-newer'),
+	del = require('del');
 
+//set variables for the folders in which we will use for gulp
 var source = 'source/',
 	dest = 'build/',
 
@@ -14,8 +15,14 @@ var source = 'source/',
 		out: dest + 'images/'
 	};
 
-//manage images
+//cleans the build folders
+gulp.task('clean', function(){
+	del([
+		dest + '*'
+	]);
+});
 
+//manage images
 gulp.task('images', function(){
 	return gulp.src(images.in)
 		.pipe(newer(images.out))
@@ -24,7 +31,6 @@ gulp.task('images', function(){
 });
 
 //default task
-
 gulp.task('default', function(){
 
 });
