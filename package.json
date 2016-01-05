@@ -18,6 +18,7 @@
   "homepage": "https://github.com/mwarnsley/Gulp-Compiling#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-imagemin": "^2.4.0"
+    "gulp-imagemin": "^2.4.0",
+    "gulp-newer": "^1.1.0"
   }
 }
