@@ -4,16 +4,24 @@
 var gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	newer = require('gulp-newer'),
-	del = require('del');
+	del = require('del'),
+	pkg = require('./package.json');
 
 //set variables for the folders in which we will use for gulp
-var source = 'source/',
+
+//file locations
+var devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),
+	source = 'source/',
 	dest = 'build/',
 
 	images = {
 		in: source +  'images/*.*',
 		out: dest + 'images/'
 	};
+
+//show build type
+console.log(pkg.name + ' ' + pkg.version + ', ' + (devBuild ? 'development' : 'production') + ' build' );
+
 
 //cleans the build folders
 gulp.task('clean', function(){
